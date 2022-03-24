@@ -1,0 +1,2 @@
+- name: Add user to needed group
+  user: name={{ user_name }} append=yes groups={{{ group_name }}
