@@ -1,6 +1,8 @@
 google_auth_version: 1.0
 
-main_user_name: user_2fa
-admin_email: "{{ main_user_name }}@{{ domain }}"
-main_user_shell: "/bin/bash"
+user_name: user_2fa
+admin_email: "{{ user_name }}@{{ domain }}"
+user_shell: "/bin/bash"
 
+
+#group_name: 2fa 
