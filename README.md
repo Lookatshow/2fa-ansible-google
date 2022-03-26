@@ -74,3 +74,8 @@ Google Authenticator with Ansible
       `python3 sendKeyToUser UserName /path/Private.key`
 
 Так же можно переделать под шаринг через PasswordManager если у него есть API
+
+
+
+#Hardening SSH - Установка и конфигурирование fail2ban на хостах
+
