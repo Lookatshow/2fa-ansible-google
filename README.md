@@ -51,3 +51,5 @@ Google Authenticator with Ansible
       
       `ansible-playbook user-sudo-create.yml`
 
+
+<b>Если в организации есть SMTP Relay - можем прикрутить скрипт для рассылки информации по созаднным пользователям (ссылка на QR-Code и private.key) </b>
