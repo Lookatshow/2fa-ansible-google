@@ -6,7 +6,7 @@
     - test_ansible2
     - test_ansible2
   tasks:
-  - name: "Create user accounts and add users to groups"
+  - name: "Create user accounts and add to groups"
     user:
       name: "{{ item }}"
       groups: "2fa"
