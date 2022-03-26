@@ -1,0 +1,6 @@
+---
+# Плейбук для отключения Google Authenticator на тестовых хостах
+
+- hosts: slave
+  tasks:
+    - /roles/2FA/tasks/google-authenticator-disable.yml
