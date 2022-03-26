@@ -3,3 +3,8 @@
 
 [prod]
 192.168.56.106
+
+
+[prod:vars]
+ansible_user=ansible
+ansible_ssh_pricate_key_file=/etc/ansible/privatekey.pem
