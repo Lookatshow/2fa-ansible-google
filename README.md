@@ -52,15 +52,25 @@ Google Authenticator with Ansible
       `ansible-playbook user-sudo-create.yml`
 
 
+# Установка инастройка Google authenticator
+
+Правильной практикой здесь будет использование Inverntory файла Ansible + Ad-Hoc команд с плейбуками для универсальной раскатки в зависимости от ОС (например в weezy репе нет libpam-google-authenticator). Но в текущей ситуации юзаем под ubuntu 20.04
+
+<b>Для установки и конфигурации Google Authenticator - необходимо запустить плейбук:</b>
+Разобраться с историей nullok
+
+`ansible-playbook oogle-authenticator-install-configure.yml`
+
+<b>Для отклчения Google Authenticator - необходимо запустить плейбук:</b>
+Разобраться с историей nullok
+
+`ansible-playbook oogle-authenticator-disable.yml`
+
+
+#Доставка private.key и QR-code Google Authenticator пользовтелям машин
+
 <b>Если в организации есть SMTP Relay - можем прикрутить скрипт для рассылки информации по созаднным пользователям (ссылка на QR-Code и private.key) </b>
 
       `python3 sendKeyToUser UserName /path/Private.key`
 
 Так же можно переделать под шаринг через PasswordManager если у него есть API
-
-# Установка инастройка Google authenticator
-
-Правильной практикой здесь будет использование Inverntory файла Ansible + Ad-Hoc команд с плейбуками для универсальной раскатки в зависимости от ОС (например в weezy репе нет libpam-google-authenticator). Но в текущей ситуации юзаем под ubuntu 20.04
-
-
-<b>Если в организации есть SMTP Relay - можем прикрутить скрипт для рассылки информации по созаднным пользователям (ссылка на QR-Code и private.key) </b>
