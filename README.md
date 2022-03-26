@@ -57,3 +57,10 @@ Google Authenticator with Ansible
       `python3 sendKeyToUser UserName /path/Private.key`
 
 Так же можно переделать под шаринг через PasswordManager если у него есть API
+
+# Установка инастройка Google authenticator
+
+Правильной практикой здесь будет использование Inverntory файла Ansible + Ad-Hoc команд с плейбуками для универсальной раскатки в зависимости от ОС (например в weezy репе нет libpam-google-authenticator). Но в текущей ситуации юзаем под ubuntu 20.04
+
+
+<b>Если в организации есть SMTP Relay - можем прикрутить скрипт для рассылки информации по созаднным пользователям (ссылка на QR-Code и private.key) </b>
