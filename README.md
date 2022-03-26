@@ -67,7 +67,7 @@ Google Authenticator with Ansible
 `ansible-playbook oogle-authenticator-disable.yml`
 
 
-#Доставка private.key и QR-code Google Authenticator пользовтелям машин
+# Доставка private.key и QR-code Google Authenticator пользовтелям машин
 
 <b>Если в организации есть SMTP Relay - можем прикрутить скрипт для рассылки информации по созаднным пользователям (ссылка на QR-Code и private.key) </b>
 
@@ -77,5 +77,5 @@ Google Authenticator with Ansible
 
 
 
-#Hardening SSH - Установка и конфигурирование fail2ban на хостах
+# Hardening SSH - Установка и конфигурирование fail2ban на хостах
 
