@@ -1,0 +1,6 @@
+---
+# Плейбук для установки и настройки Google Authenticator на тестовых хостах
+
+- hosts: test
+  tasks:
+    - /roles/2FA/tasks/google-authenticatore.yml
