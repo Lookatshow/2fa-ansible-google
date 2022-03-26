@@ -53,3 +53,7 @@ Google Authenticator with Ansible
 
 
 <b>Если в организации есть SMTP Relay - можем прикрутить скрипт для рассылки информации по созаднным пользователям (ссылка на QR-Code и private.key) </b>
+
+`python3 sendKeyToUser UserName /path/Private.key`
+
+Так же можно переделать под шаринг через PasswordManager если у него есть API
