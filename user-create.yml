@@ -1,0 +1,13 @@
+---
+- hosts: test
+  vars:
+    users:
+    - test_ansible1
+    - test_ansible2
+    - test_ansible2
+  tasks:
+  - name: "Create user accounts and add users to groups"
+    user:
+      name: "{{ item }}"
+      groups: "2fa"
+    with_items: "{{ users }}"
