@@ -4,5 +4,7 @@ user_name: user_2fa
 admin_email: "{{ user_name }}@{{ domain }}"
 user_shell: "/bin/bash"
 
+admin_email: soc@ourdomain.org
+
 
 #group_name: 2fa 
