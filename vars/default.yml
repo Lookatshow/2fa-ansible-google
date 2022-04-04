@@ -6,7 +6,7 @@ user_shell: "/bin/bash"
 
 admin_email: soc@ourdomain.org
 
-# ssh
+# ssh hardening
 kex_algorithms: "diffie-hellman-group-exchange-sha256"
 ciphers: "aes256-ctr"
 macs: "hmac-sha2-512"
