@@ -1,5 +1,38 @@
 - name: Create user account
-  user: name={{ user_name }} state=present shell={{ user_shell }} groups=sudo
+  user: name={{ user_name }} state=present shell={{ user_shell }} groups=sudo # или 2FA
 
-- name: Give user account sudo power
-  template: src=sudoers.j2 dest=/etc/sudoers.d/sudoers owner=root group=root mode=0440 validate='visudo -cf %s'
+
+- name: Add user to the sudoers
+     copy:
+          dest: "/etc/sudoers.d/{{ user_name }}"
+          content: "{{ user_name }}  ALL=(ALL)  NOPASSWD: ALL"
+
+- name: Deploy SSH Key
+     authorized_key: user={{ user_name }}
+                     key="{{ lookup('file', '/home/devops/.ssh/id_rsa.pub') }}"
+                     state=present
+
+
+# Чтобы 2FA работал с пользователями без пароля
+- name: Disable Password Authentication
+
+     lineinfile:
+           dest=/etc/ssh/sshd_config
+           regexp='^PasswordAuthentication'
+           line="PasswordAuthentication no"
+           state=present
+           backup=yes
+
+- name: Disable Root Login
+     lineinfile:
+           dest=/etc/ssh/sshd_config
+           regexp='^PermitRootLogin'
+           line="PermitRootLogin no"
+           state=present
+           backup=yes
+     notify:
+       - restart ssh
+
+
+
+
