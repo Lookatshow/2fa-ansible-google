@@ -48,7 +48,7 @@ Google Authenticator with Ansible
 Переменная с именем пользователя - должна лежать в vars/main.yml user_name, 
   
       
-      `ansible-playbook users.yml -i hosts.yml`
+      `ansible-playbook users.yml`
 
 
 # Установка инастройка Google authenticator
