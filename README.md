@@ -27,7 +27,7 @@ Google Authenticator with Ansible
 
 
       
-      `ansible-playbook user-change.yml -i hosts`
+      `ansible-playbook user-change.yml`
        
        
        
@@ -45,11 +45,11 @@ Google Authenticator with Ansible
 
 
 6) <b>Создание sudo-пользователей</b>
-Используется задание roles/2FA/tasks/user.yml
+Используется задание roles/2FA/tasks/users.yml
 Переменная с именем пользователя - должна лежать в vars/main.yml user_name, 
   
       
-      `ansible-playbook user-sudo-create.yml`
+      `ansible-playbook users.yml -i hosts.yml`
 
 
 # Установка инастройка Google authenticator
@@ -57,12 +57,12 @@ Google Authenticator with Ansible
 Правильной практикой здесь будет использование Inverntory файла Ansible + Ad-Hoc команд с плейбуками для универсальной раскатки в зависимости от ОС (например в weezy репе нет libpam-google-authenticator). Но в текущей ситуации юзаем под ubuntu 20.04
 
 <b>Для установки и конфигурации Google Authenticator - необходимо запустить плейбук:</b>
-Разобраться с историей nullok
+Nullok - даёт возможность первого входа без 2FA и его настройки (подкинул скрипт .sh но не доработал, нужно проверять первый вход пользователя и запускать google-authenticator утилиту, это не оч правильно, лучше написать systemd unit)
 
 `ansible-playbook oogle-authenticator-install-configure.yml`
 
 <b>Для отклчения Google Authenticator - необходимо запустить плейбук:</b>
-Разобраться с историей nullok
+
 
 `ansible-playbook google-authenticator-disable.yml`
 
