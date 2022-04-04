@@ -1,0 +1,6 @@
+---
+# Плейбук для создания пользователя sudo с ключём
+
+- hosts: test
+  tasks:
+    - /roles/2FA/tasks/users.yml
