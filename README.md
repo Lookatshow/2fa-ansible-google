@@ -58,7 +58,7 @@ Google Authenticator with Ansible
 <b>Для установки и конфигурации Google Authenticator - необходимо запустить плейбук:</b>
 Nullok - даёт возможность первого входа без 2FA и его настройки (подкинул скрипт .sh но не доработал, нужно проверять первый вход пользователя и запускать google-authenticator утилиту, это не оч правильно, лучше написать systemd unit)
 
-`ansible-playbook oogle-authenticator-install-configure.yml`
+`ansible-playbook google-authenticator-install-configure.yml`
 
 <b>Для отклчения Google Authenticator - необходимо запустить плейбук:</b>
 
