@@ -6,5 +6,10 @@ user_shell: "/bin/bash"
 
 admin_email: soc@ourdomain.org
 
+# ssh
+kex_algorithms: "diffie-hellman-group-exchange-sha256"
+ciphers: "aes256-ctr"
+macs: "hmac-sha2-512"
+
 
 #group_name: 2fa 
