@@ -27,8 +27,7 @@ Google Authenticator with Ansible
 
 
       
-      `ansible-playbook user-change.yml`
-       
+      `ansible-playbook user-change.yml`       
        
        
  4) <b>Добавление пользователя в группу</b>
