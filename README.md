@@ -27,7 +27,7 @@ Google Authenticator with Ansible
 
 
       
-      `ansible-playbook user-change.yml`
+      `ansible-playbook user-change.yml -i hosts`
        
        
        
@@ -64,7 +64,7 @@ Google Authenticator with Ansible
 <b>Для отклчения Google Authenticator - необходимо запустить плейбук:</b>
 Разобраться с историей nullok
 
-`ansible-playbook oogle-authenticator-disable.yml`
+`ansible-playbook google-authenticator-disable.yml`
 
 
 # Доставка private.key и QR-code Google Authenticator пользовтелям машин
@@ -80,7 +80,9 @@ Google Authenticator with Ansible
 # Hardening SSH - Установка и конфигурирование fail2ban на хостах 
 
 - Настройка fail2ban
-- Внешний контроль Weak Encryption (для хешей)
+- Внешний контроль Weak Encryption (для хешей) или ограничение доступа толкьо с доверенных подсетей (ufw.yml)
+
+`ansible-playbook ufw.yml`
 
 (Максимум паранойи)
 Захарденить ближайший маршрутизатор, во избежание - BGP Hijacking.
